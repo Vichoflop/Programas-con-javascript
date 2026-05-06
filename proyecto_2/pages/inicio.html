@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <script src="../js/app.js"></script>
+    </head>
+    <body>
+    
+    <div id="nav-container"></div>
+    <hr class="border-light">
+
+    <div class="container py-5">
+        <h2 class="fw-blod mb-1 animar">Bienvenido</h2>
+        <p class="text-muted mb-4 animar">Ingresa tu nombre y el sitio te recordara</p>
+        <div id="div-saludo" class="alert alert-primary animar" style="display: none;">
+            <p class="md-1 fw-semibold" id="texto-saludo"></p>
+            <small>Tu nombre esta guardado en localStorage</small>
+        </div>
+
+        <div class="tarjeta animar" id="div-formulario">
+            <label for="input-nombre" class="form-label fw-semibold">¿Cual es tu nombre?</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="input-nombre">
+                <button class="btn btn-primary" onclick="guardarNombre()">Guardar</button>
+            </div>
+            <small>
+                Cierra esta pagina, vuelve a abrirla y veras que el sitio te recuerda
+            </small>
+        </div>
+
+        <div class="text-end mt-2" id="div-olvidar">
+            <button class="btn btn-sm btn-outline-danger" onclick="olvidarNombre()">
+                Olvidar Mi Nombre
+            </button>
+        </div>
+
+        <div class="row g-3 mt-4">
+            <div class="col-md4 animar">
+                <div class="tarjeta text-center h-100">
+                    <div style="font-size: 2rem;">💾</div>
+                    <h6 class="fw-bold mt-2"> guardar()</h6>
+                    <code class="small text-primary">localStorage.setItem()</code>
+                    <p class="small text-muted mt-2">Guardar un dato con un nombre</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 animar">
+            <div class="tarjeta tex-center h-100">
+                <div style="font-size: 2rem;">📖</div>
+                <h6 class="fw-bold mt-2">leer()</h6>
+                <code class="small text-primary">localStorage.setItem()</code>
+                <p class="small text-muted mt-2">Recupera el dato guardado</p>
+            </div>
+        </div>
+        <div class="col-md-4 animar">
+            <div class="tarjeta tex-center h-100">
+                <div style="font-size: 2rem;">🗑️</div>
+                <h6 class="fw-bold mt-2">borrar()</h6>
+                <code class="small text-primary">localStorage.removeItem()</code>
+                <p class="small text-muted mt-2">Elimina el dato guardado</p>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="border-light">
+    <div id="footer-container"></div>
+    </body>
+</html>
